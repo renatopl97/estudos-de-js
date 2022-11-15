@@ -5,7 +5,7 @@ const listaDeDestinos = new Array(`Salvador`, `São Paulo`, `Rio de Janeiro`);
 const idadeComprador = 18;
 const estaAcompanhado = false; //se verdadeiro=acompanhado e se false=sem companhia
 let temPassagem = false;
-const destino = "Palmas";
+const destino = "Salvador";
 
 console.log(`\n Destinos possíveis`);
 console.log(listaDeDestinos);
@@ -32,4 +32,16 @@ while(contador<3){
 }
 console.log(`Destino existe: ${existe}`);
 
+if (podeComprar && existe) {
+    console.log("Boa viagem!");
+}else{
+    console.log("Não foi possível comprar");
+}
+//dentro do for é dividido em três partes, primeira:inicialização de variável ;segunda:Condição ;terceira: incrementação, comando final do loop;
+for(let cont = 0; cont < 3; contador ++){
+    if (listaDeDestinos[contador] == destino) {
+        existe = true
+        break
+    }
+}
 
